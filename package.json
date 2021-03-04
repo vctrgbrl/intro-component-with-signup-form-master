@@ -1,0 +1,14 @@
+{
+  "name": "intro-component-with-signup-form-master",
+  "version": "1.0.0",
+  "description": "FrontEnd exercise",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "Victor Gabriel Sant'Ana da Silva",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

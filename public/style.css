@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600&display=swap');
+
+:root {
+  --fm-salmon: hsl(0, 100%, 74%);
+  --fm-oliva: hsl(154, 59%, 51%);
+  --fm-violeta: hsl(248, 32%, 49%);
+  --fm-dark-blue: hsl(249, 10%, 26%);
+  --fm-grayish-blue: hsl(246, 25%, 77%);
+}
+
+html, body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: var(--fm-grayish-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+* {
+  box-sizing: border-box;
+  /* border: 1px solid blueviolet; */
+}
+a{
+  text-decoration: none;
+  color: inherit;
+}
+.signup-main {
+  padding: 1.5rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--fm-salmon);
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  background-image: url("./images/bg-intro-mobile.png");
+  background-size: cover;
+}
+
+.signup-1{
+  margin-bottom: 1rem;
+  color: white;
+}
+.signup-1 h2{
+  padding: 0 1rem 0 1rem;
+}
+.signup-1 p{
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.signup-button{
+  cursor: pointer;
+  background-color: var(--fm-violeta);
+  color: white;
+  margin: 1rem 0 1.5rem 0;
+  border-radius: 0.8rem;
+  font-weight: 300;
+  padding: 1.2rem 0 1.2rem 0;
+  box-shadow: 0px 6px 1px 0 rgba(0, 0, 0, 0.192);
+}
+
+.signup-button p{
+  width: 60%;
+  margin: auto;
+}
+.signup-button p b{
+  font-weight: 600;
+}
+
+.signup-form{
+  background-color: white;
+  border-radius: 0.8rem;
+  padding: 1.5rem;
+  box-shadow: 0px 7px 1px 0 rgba(36, 36, 36, 0.192);
+}
+.input-div{
+  outline: none;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  position: relative;
+}
+.signup-form input{
+  transition: all ease 150ms;
+  font-family: inherit;
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid hsl(244, 20%, 84%);
+  color: var(--fm-dark-blue);
+  font-weight: bold;
+  border-radius: 0.3rem;
+  outline: none;
+}
+
+.signup-form input[type="text"]:focus{
+  border: 1px solid var(--fm-violeta);
+}
+.signup-form input[type="password"]:focus{
+  border: 1px solid var(--fm-violeta);
+}
+.signup-form .input-error{
+  border: 1px solid var(--fm-salmon);
+  box-shadow: 0 0 2px 1px var(--fm-salmon);
+}
+
+.icon-error{
+  transition: all ease 150ms;
+  display: none;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+}
+.signup-form .error-span{
+  align-self: flex-end;
+  margin:0; 
+  color: var(--fm-salmon);
+  font-weight: 600;
+  margin: 4px 0 2px 0;
+  font-style: italic;
+}
+.signup-form .disabled{
+  margin: 0;
+  margin-top: 20px;
+}
+
+.signup-form [type="submit"]{
+  outline: none;
+  cursor: pointer;
+  background-color: var(--fm-oliva);
+  color: white;
+  border: none;
+  font-weight: 600;
+  letter-spacing: 2px;
+  box-shadow: 0 4px 1px 0 hsl(154, 53%, 40%);
+  transition: all ease-out 100ms;
+}
+.signup-form [type="submit"]:active {
+  transform: translateY(3px);
+  box-shadow: 0 1px 1px 0 hsl(153, 57%, 32%);
+}
+.signup-form span{
+  font-size: 12px;
+  color: var(--fm-grayish-blue);
+  font-weight: 300;
+  text-align: center;
+  margin: 0 1rem 0 1rem;
+}
+
+.signup-form span a{
+  color: var(--fm-salmon);
+  font-weight: 600;
+}
+
+@media screen and (min-width:680px){
+  .signup-main{
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    padding: 0 2rem 0 2rem;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+    background-image: url("./images/bg-intro-desktop.png");
+    background-size: cover;
+  }
+  .signup-div{
+    flex: 1 1 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .signup-div:last-child{
+    padding-left: 1rem;
+  }
+  .signup-1 {
+    padding-right: 1rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    text-align: start;
+  }
+  .signup-1 h2{
+    font-size: 2.6rem;
+    margin-bottom: 0;
+  }
+  .signup-1 p {
+    text-align: start;
+  }
+  .signup-button p{
+    width: auto;
+  }
+  .signup-form [type="submit"]:hover {
+    animation-name: click;
+    animation-duration: 400ms;
+    animation-timing-function: ease;
+  }
+  @keyframes click {
+    33%{
+      transform: translateY(3px);
+      box-shadow: 0 1px 1px 0 hsl(153, 57%, 32%);
+    }
+    66%{
+      transform: translateY(-2px);
+      box-shadow: 0 6px 1px 0 hsl(154, 53%, 40%);
+    }
+  }
+}
+
+@media screen and (min-width:1024px){
+  .signup-main{
+    padding-left: 7rem;
+    padding-right: 7rem;
+  }
+}
